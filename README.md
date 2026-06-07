@@ -7,7 +7,7 @@ To deliver sub-second production latency, the system implements an offline-preco
 
 ## Core Architecture & Engineering Highlights
 
-- **Decoupled Optimization Matrix**: Isolates the heavy training phase from the application layer by saving static text profiles into pre-cached, serialized structures (`jobs_clean.pkl`, `job_embeddings.npy`, and `tfidf_matrix.npz`).
+- ** Decoupled Optimization Matrix **: Isolates the heavy training phase from the application layer by saving static text profiles into pre-cached, serialized structures (`jobs_clean.pkl`, `job_embeddings.npy`, and `tfidf_matrix.npz`).
 - **Sub-Second Search Latency**: Loads a persistent `tfidf_vectorizer.pkl` to transform raw user search queries or skill inputs into a sparse term-frequency vector, running Cosine Similarity calculations against all 30,000 records in milliseconds.
 - **Persistent Geolocation Caching**: Features a localized caching layer (`geo_cache.pkl`) designed to store coordinate lookups, optimizing location-based job matching without introducing high-latency external API dependencies.
 - **Production Code Isolation**: Engineered with a clean separation of concerns, separating the core text preprocessing and mathematical matching logic (`main.py`) from the interactive web deployment front-end (`app.py`) built with Streamlit.
