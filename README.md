@@ -2,12 +2,10 @@
 ## JOB RECOMMENDATION SYSTEM
 
 A high-performance Natural Language Processing (NLP) recommendation pipeline built and trained on a curated dataset of 30,000
- job records. The system utilizes optimized text vectorization
-and matrix mathematics to surface relevant career opportunities based on semantic similarity scoring.
+job records. The system utilizes optimized text vectorization and matrix mathematics to surface relevant career opportunities based on semantic similarity scoring.
 
 To deliver sub-second production latency, the system implements an offline-precomputation and online-inference split architecture.
- By pre-calculating and serializing heavy text matrices,
-it bypasses runtime computing overhead and allows users to search and filter the 30k corpus instantly.
+By pre-calculating and serializing heavy text matrices,it bypasses runtime computing overhead and allows users to search and filter the 30k corpus instantly.
 
 ## Core Architecture & Engineering Highlights
 
